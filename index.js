@@ -4,7 +4,7 @@ const people = {
     "Mg": 1,
     "Tx": 1,
     "Dk": 2,
-    "Dw": 2,
+    "Pd": 2,
     "Ml": 2,
     "Ty": 2,
 }
