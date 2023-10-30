@@ -1,9 +1,9 @@
 const people = {
-    "Hw": 1,
+    "Hh": 1,
     "Jr": 1,
     "Mg": 1,
     "Tx": 1,
-    "Dk": 2,
+    "Dc": 2,
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
