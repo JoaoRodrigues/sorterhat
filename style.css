@@ -29,13 +29,13 @@ main {
 }
 
 .box-container {
-  width: 50%;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 
 }
 
@@ -51,4 +51,6 @@ main {
   font-weight: 600;
   text-transform: capitalize;
   color: white;
+  /*  Give a little space between boxes  */
+  margin: auto 10px;
 }
