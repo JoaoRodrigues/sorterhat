@@ -3,10 +3,12 @@ const people = {
     "Jr": 1,
     "Mg": 1,
     "Tx": 1,
+    "Em": 1,
     "Dc": 2,
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
+    "Em": 2,
 }
 
 const pallette = [
