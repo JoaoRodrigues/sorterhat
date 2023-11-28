@@ -52,5 +52,5 @@ main {
   text-transform: capitalize;
   color: white;
   /*  Give a little space between boxes  */
-  margin: auto 10px;
+  margin: 10px;
 }
