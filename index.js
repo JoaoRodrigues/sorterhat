@@ -33,24 +33,26 @@ const date_options = {
 // Main
 window.onload = function sorter() {
     let today = new Date(); // UTC
-    let wkday = today.getDay(); // Sun=0
-    let moday = today.getDate();
-
+    
     let datebox = document.querySelector(".datebox");
     datebox.innerHTML = today.toLocaleDateString("en-US", date_options)
 
-    let g = (moday % 2 > 0) ? 1: 2;
+    // simplify group picking on day since epoch being even/odd
+    let d_since_epoch = Math.floor(today.getTime() / (1000 * 86400))  // ms to s to days
+    let is_odd = (d_since_epoch % 2 > 0);
+    let grp_ix =  (is_odd ? 1: 2);
 
-    let tg = Object.keys(people).filter(o => people[o] === g)
+    let today_grp = Object.keys(people).filter(o => people[o] === grp_ix)
 
-    if (wkday % 2 === 0) {  // revert on Tue/Thu
-        tg.reverse()
+    // reverse order every other day
+    if ((d_since_epoch + is_odd) % 4 == 0) {
+        today_grp.reverse()
     }
 
     tg.push("Em"); // Always add The Boss at the end.
     
-    for (i = 0; i < tg.length; i++) {
-        createBox(tg[i], colors[i]);
+    for (i = 0; i < today_grp.length; i++) {
+        createBox(today_grp[i], colors[i]);
     }
 }
 
