@@ -8,7 +8,6 @@ const people = {
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
-    "Ak": 2,
 }
 
 const pallette = [
