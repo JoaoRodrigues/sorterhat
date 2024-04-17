@@ -4,10 +4,14 @@ const people = {
     "Mg": 1,
     "Tx": 1,
     "Lz": 1,
+    "Gr": 1,
+    "Jt": 2,
+    "Gr": 2,
     "Dc": 2,
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
+    "Hb": 2,
 }
 
 const pallette = [
