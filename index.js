@@ -6,7 +6,6 @@ const people = {
     "Lz": 1,
     "Gr": 1,
     "Jt": 2,
-    "Gr": 2,
     "Dc": 2,
     "Pd": 2,
     "Ml": 2,
