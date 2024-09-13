@@ -52,7 +52,7 @@ window.onload = function sorter() {
         today_grp.reverse()
     }
 
-    today_grp.push("Em"); // Always add The Boss at the end.
+    today_grp.unshift("Em"); // Always add The Boss first.
     
     for (i = 0; i < today_grp.length; i++) {
         createBox(today_grp[i], colors[i]);
