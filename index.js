@@ -13,6 +13,7 @@ const people = {
     "Ty": 2,
     "Hb": 2,
     "Bz": 2,
+    "Mk": 2,
 }
 
 const pallette = [
