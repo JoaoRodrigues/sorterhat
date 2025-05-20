@@ -11,8 +11,6 @@ const people = {
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
-    "Hb": 2,
-    "Bz": 2,
     "Mk": 2,
 }
 
