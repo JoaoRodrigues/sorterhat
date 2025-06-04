@@ -12,6 +12,7 @@ const people = {
     "Ml": 2,
     "Ty": 2,
     "Mk": 2,
+    "Ab": 2,
 }
 
 const pallette = [
