@@ -41,7 +41,7 @@ const date_options = {
 // Main
 window.onload = function sorter() {
     let today = new Date(); // UTC
-    
+
     let datebox = document.querySelector(".datebox");
     datebox.innerHTML = today.toLocaleDateString("en-US", date_options)
 
@@ -58,7 +58,7 @@ window.onload = function sorter() {
     }
 
     today_grp.unshift("Em"); // Always add The Boss first.
-    
+
     for (i = 0; i < today_grp.length; i++) {
         createBox(today_grp[i], colors[i]);
     }
@@ -67,8 +67,10 @@ window.onload = function sorter() {
 // Functions
 function createBox(name, bgcolor) {
     let div = document.createElement("div");
+    div.id = "box-" + name;
     div.classList.add("box");
     div.style.backgroundColor = bgcolor;
+    localStorage.setItem(div.id + "-bgcolor", bgcolor);
 
     div.innerHTML = name;
     document.querySelector(".box-container").appendChild(div);
@@ -86,4 +88,29 @@ function getRandomSample(arr, size) {
     return shuffled.slice(0, size);
 }
 
+const gray = "#dcdcdc"
 
+// Robust way of comparing colors
+function isElementBGColor(el, color) {
+  const ctx = document.createElement('canvas').getContext('2d', { willReadFrequently: true });
+  ctx.fillStyle = color;
+  ctx.fillRect( 0, 0, 1, 1 );
+  ctx.fillStyle = getComputedStyle(el, null).getPropertyValue("background-color");
+  ctx.fillRect( 1, 0, 1, 1 );
+  const a = JSON.stringify(Array.from(ctx.getImageData(0, 0, 1, 1).data));
+  const b = JSON.stringify(Array.from(ctx.getImageData(1, 0, 1, 1).data));
+  ctx.canvas = null;
+  return a === b;
+}
+
+document.addEventListener("click", function(e) {
+  const target = e.target.closest(".box");
+  if (target) {
+    if (!isElementBGColor(target, gray)) {
+        target.style.backgroundColor = gray;
+    } else {
+        boxColor = localStorage.getItem(target.id + "-bgcolor");
+        target.style.backgroundColor = boxColor;
+    }
+  }
+});
