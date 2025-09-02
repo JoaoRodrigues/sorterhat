@@ -1,19 +1,16 @@
 const people = {
     "Hh": 1,
-    "Jr": 1,
     "Mg": 1,
     "Tx": 1,
     "Lz": 1,
     "Gr": 1,
     "Dk": 1,
-    "Kc": 1,
+    "Jr": 2,
     "Jt": 2,
     "Dc": 2,
     "Pd": 2,
     "Ml": 2,
     "Ty": 2,
-    "Mk": 2,
-    "Ab": 2,
 }
 
 const pallette = [
