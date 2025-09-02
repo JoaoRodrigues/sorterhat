@@ -8,7 +8,6 @@ const people = {
     "Jr": 2,
     "Jt": 2,
     "Dc": 2,
-    "Pd": 2,
     "Ml": 2,
     "Ty": 2,
 }
@@ -52,6 +51,12 @@ window.onload = function sorter() {
     // reverse order every other day
     if ((d_since_epoch + is_odd) % 4 == 0) {
         today_grp.reverse()
+    }
+
+    // Add Pd last on every Tue
+    let dayOfWeek = today.getDay();
+    if (dayOfWeek === 2) {
+        today_grp.push("Pd");
     }
 
     today_grp.unshift("Em"); // Always add The Boss first.
