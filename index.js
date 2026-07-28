@@ -54,14 +54,14 @@ window.onload = function sorter() {
         today_grp.reverse()
     }
 
-    // Add Pd last on every Tue
-    let dayOfWeek = today.getDay();
-    if (dayOfWeek === 2) {
-        today_grp.push("Pd");
-    }
-
     today_grp.unshift("Em"); // Always add The Boss first.
 
+    // Add Pd first on every Tue
+    let dayOfWeek = today.getDay();
+    if (dayOfWeek === 2) {
+        today_grp.unshift("Pd");
+    }
+    
     for (i = 0; i < today_grp.length; i++) {
         createBox(today_grp[i], colors[i]);
     }
